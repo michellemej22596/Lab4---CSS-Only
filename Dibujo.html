@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Dibujo CSS</title>
-        <style>
-            .cuadroCorazon {
-                width: 50px;
-                height: 50px;
-                transform: rotate(45deg);
-                background: red;
-                position: relative;
-                top: 10rem;
-                left: 10rem;
-            }
+<head>
+    <title>Dibujo CSS</title>
+    <style>
+        .corazon-container {
+            width: 50px;
+            height: 50px;
+            transform: rotate(45deg);
+            position: relative;
+            top: 10rem;
+            left: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-            .cuadroCorazon::before, .cuadroCorazon::after {
-                content: "";
-                height: 50px;
-                width: 50px;
-                border-radius: 50%;
-                background: red;
-                position: absolute;
-            }
+        .cuadroCorazon {
+            width: 50px;
+            height: 50px;
+            background: red;
+            transition: transform 0.5s ease; 
+        }
 
-            .cuadroCorazon::before {
+        .cuadroCorazon::before,
+        .cuadroCorazon::after {
+            content: "";
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+        }
+
+        .cuadroCorazon::before {
             top: 0;
             left: -25px;
-            }
+        }
 
-            .cuadroCorazon::after {
+        .cuadroCorazon::after {
             top: -25px;
-            }
+            right: 0;
+        }
 
-        </style>
-    </head>
+        .corazon-container:hover .cuadroCorazon {
+            transform: rotate(45deg) scale(2);
+        }
+    </style>
+</head>
 
-    <body>
+<body>
+    <div class="corazon-container">
         <div class="cuadroCorazon"></div>
-    </body>
+    </div>
+</body>
 </html>
+
