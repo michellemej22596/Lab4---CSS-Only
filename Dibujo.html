@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Dibujo CSS</title>
-    <style>
-        .corazon-container {
-            width: 50px;
-            height: 50px;
-            transform: rotate(45deg);
-            position: relative;
-            top: 10rem;
-            left: 10rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cuadroCorazon {
-            width: 50px;
-            height: 50px;
-            background: red;
-            transition: transform 0.5s ease; 
-        }
-
-        .cuadroCorazon::before,
-        .cuadroCorazon::after {
-            content: "";
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            background: red;
-            position: absolute;
-        }
-
-        .cuadroCorazon::before {
-            top: 0;
-            left: -25px;
-        }
-
-        .cuadroCorazon::after {
-            top: -25px;
-            right: 0;
-        }
-
-        .corazon-container:hover .cuadroCorazon {
-            transform: rotate(45deg) scale(2);
-        }
-    </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <div class="corazon-container">
-        <div class="cuadroCorazon"></div>
-    </div>
+<div class="sky">
+
+  <div class="star"></div>
+  <div class="moon"></div>
+  <div class="star"></div>  
+
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+
+  <div class="star"></div>
+  <div class="star"></div>
+  
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="star"></div>
+
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+</div>
+
+
+
 </body>
 </html>
-
