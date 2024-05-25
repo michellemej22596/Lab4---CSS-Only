@@ -22,19 +22,31 @@ body {
 }
 
 .star, .cloud {
-  margin: 5vh 3vw; /* Esto proporciona un espaciado vertical y horizontal aleatorio */
+  margin: 5vh 3vw; 
 }
 
-/* Estilos de la luna */
+@keyframes moonMove {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(5vw); 
+  }
+  100% {
+    transform: translateX(-5vw); 
+  }
+}
+
 .moon {
   width: 100px;
   height: 100px;
   background-color: #FFF;
   border-radius: 50%;
-  margin-left: auto; /* Esto puede ayudar a mover la luna a un lado */
-  margin-right: auto;
-  transition: transform 0.5s ease, background-color 0.5s ease;
+  position: relative;
+  animation: moonMove 10s ease-in-out infinite; 
 }
+
+
 
 /* Estilos de las estrellas */
 .star {
